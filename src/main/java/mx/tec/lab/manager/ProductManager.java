@@ -45,7 +45,7 @@ public class ProductManager {
 	
 	/**
 	 * get an specific product with the id
-	 * @param id
+	 * @param id product id 
 	 * @return found product
 	 */
 	public Optional<Product> getProduct(final long id) {
@@ -53,7 +53,7 @@ public class ProductManager {
 	}
 	/**
 	 *  add a new product
-	 * @param newProduct
+	 * @param newProduct product to add
 	 * @return new product created
 	 */
 	public Product addProduct(final Product newProduct) {
@@ -68,9 +68,8 @@ public class ProductManager {
 
 	/**
 	 * updates the products in the list
-	 * @param oldProduct
-	 * @param newProduct
-	 * @return the updated product
+	 * @param id product to change
+	 * @param modifiedProduct new product info
 	 */
 	public void updateProduct(final long id, final Product modifiedProduct) {
 		if (modifiedProduct.getId() == id) {
@@ -84,7 +83,7 @@ public class ProductManager {
 	
 	/**
 	 * deletes a specific product
-	 * @param existingProduct
+	 * @param existingProduct product to delete
 	 */
 	public void deleteProduct(final Product existingProduct) {
 		productRepository.delete(existingProduct);
